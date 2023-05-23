@@ -1,6 +1,24 @@
 import { DefaultSeo } from "next-seo"
 import type { AppProps } from 'next/app'
+import { Lato, Darumadrop_One } from '@next/font/google'
+
 import '../styles/globals.css'
+
+
+const lato = Lato({ 
+    weight: ['100', '300', '400', '700', '900'], 
+    style: ["normal"], 
+    subsets: ['latin'], 
+    display: 'swap'
+  });
+
+
+  const darumadrop_One = Darumadrop_One({ 
+    weight: ['400'], 
+    style: ["normal"], 
+    subsets: ['latin'], 
+    display: 'swap'
+  }); 
 
 
 
@@ -8,15 +26,14 @@ export default function MyApp({ Component, pageProps } : AppProps) {
     return (
         <>
             <style jsx global>
-            {''
-            /* Theme Setup - Your fonts here 
+            {
             `
             :root {
-                --libre-baskerville-font: ${libre_baskerville.style.fontFamily};
-                --bebas-neue-font: ${bebas_neue.style.fontFamily};
+                --lato-font: ${lato.style.fontFamily};
+                --darumadrop_One-font: ${darumadrop_One.style.fontFamily};
             }
             `
-            */}
+            }
             </style>
             <DefaultSeo 
                 titleTemplate={`%s | Site Title `}

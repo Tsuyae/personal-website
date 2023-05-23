@@ -4,6 +4,12 @@ type TestProps = {}
 
 export default function Test({}: TestProps) {
   return (
-    <div className='bg-red-500 text-blue-600'>Test</div>
+    <div className='flex flex-col items-center justify-center'>
+      <p className='flex font-secondary text-3xl'>noah.</p>
+      <p className='flex'>Test 1</p>
+    </div>
   )
 }
+
+
+//#1C1C1C

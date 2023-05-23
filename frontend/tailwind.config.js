@@ -20,14 +20,13 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        /* Theme Setup - Your font here: 
-        primary: ['var(--libre-baskerville-font)', ...fontFamily.serif],
-        sans: ['var(--bebas-neue-font)', ...fontFamily.sans],
-        */ 
+        primary: ['var(--lato-font)', ...fontFamily.sans],
+        secondary: ['var(--darumadrop_One-font)', ...fontFamily.sans],
       },
       colors: {
         'black': '#000000', 
         'white': '#FFFFFF',
+        'dark' : '#1C1C1C'
       },
     },
   },
