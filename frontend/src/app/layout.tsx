@@ -1,7 +1,12 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Lato } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] })
+const lato = Lato({ 
+  weight: ['100', '300', '400', '700', '900'], 
+  style: ["normal"], 
+  subsets: ['latin'], 
+  display: 'swap'
+}); 
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={lato.className}>{children}</body>
     </html>
   )
 }
