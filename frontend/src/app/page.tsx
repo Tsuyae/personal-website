@@ -9,7 +9,7 @@ export default function Home() {
 
 const Hero = () => {
   return(
-    <div className="flex justify-center">
+    <div className="block justify-center">
       <h1 className="my-8 font-mono text-4xl md:text-6xl">
         hi
         <span className="inline-flex h-20 pt-2 overflow-x-hidden animate-type whitespace-nowrap text-brand-accent will-change-transform">

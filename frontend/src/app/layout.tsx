@@ -1,9 +1,12 @@
 import Link from 'next/link';
-import './globals.css'
-import { Lato } from 'next/font/google';
+import { Cabin } from 'next/font/google';
 
-const lato = Lato({ 
-  weight: ['100', '300', '400', '700', '900'], 
+import './globals.css'
+import { Nav } from '../../components/sections/nav';
+
+
+const cabin = Cabin({ 
+  weight: ['400', '500', '600', '700'], 
   style: ["normal"], 
   subsets: ['latin'], 
   display: 'swap'
@@ -15,8 +18,8 @@ export const metadata = {
 }
 
 const links : { text : string,  href : string}[] = [
-  { text : 'about', href : 'about' },
-  { text : 'contact', href : 'contact' },
+  { text : 'About', href : 'about' },
+  { text : 'Contact', href : 'contact' },
 ]
 
 export default function RootLayout({
@@ -26,8 +29,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lato.className}>
-        <Nav/>
+      <body className={cabin.className}>
+        <Nav links={links}/>
         {children}
         <Footer/>
       </body>
@@ -35,20 +38,11 @@ export default function RootLayout({
   )
 }
 
-const Nav  = () => {
-  return(
-    <nav className='navbar'>
-      <div className='flex justify-center items-center gap-4 text-2xl'>
-        {links.map((link, index) => (<Link key={index} href={link.href}>{link.text}</Link>))}
-      </div>
-    </nav>
-  )
-}
 
 const Footer = () => {
   return(
-    <footer>
-      <div className='flex justify-center items-center'>
+    <footer id='footer'>
+      <div className='flex justify-center items-center bg-black bottom-0'>
         <p>footer goes here.</p>
       </div>
     </footer>
