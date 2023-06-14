@@ -7,11 +7,11 @@ export const Nav = (props: NavProps) => {
     return(
       <nav id='navbar'>
         <div className='flex justify-center items-center bg-black text-2xl gap-4 py-4'>
-            {
-                props.links.map(
-                    (link, index) => (<NavLink key={index} href={link.href} text={link.text}/>)
-                    )
-            }
+          {
+            props.links.map(
+              (link, index) => (<NavLink key={index} text={link.text} href={link.href}/>)
+            )
+          }
         </div>
       </nav>
     )

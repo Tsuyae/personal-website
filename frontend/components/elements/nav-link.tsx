@@ -4,6 +4,6 @@ import { NavLinkProps } from "../../schema/types"
 
 export default function NavLink(props : NavLinkProps) {
   return (
-    <Link {...props}/>
+    <Link className={props.className} href={props.href}>{props.text}</Link>
   )
 }
