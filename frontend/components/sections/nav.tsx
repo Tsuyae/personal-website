@@ -9,7 +9,7 @@ export const Nav = (props: NavProps) => {
         <div className='flex justify-center items-center bg-black text-2xl gap-4 py-4'>
             {
                 props.links.map(
-                    (link, index) => (<NavLink key={index} href={link.href}>{link.text}</NavLink>)
+                    (link, index) => (<NavLink key={index} href={link.href} text={link.text}/>)
                     )
             }
         </div>
