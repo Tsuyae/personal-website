@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={cabin.className}>
         <Nav
           links={links}
-          className='absolute flex justify-center my-4 top-0 w-full z-50'/>
+          className='fixed flex justify-center py-4 inset-x-0 top-0 w-full z-50'/>
           {/* the className prop can be overridden by page-specific layouts. */}
         {children}
         <Footer/>
