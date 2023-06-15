@@ -32,9 +32,10 @@ export default function RootLayout({
       <body className={cabin.className}>
         <Nav
           links={links}
-          className='fixed flex justify-center py-4 inset-x-0 top-0 w-full z-50'/>
+          className='flex justify-center py-4 inset-x-0 top-0 w-full z-50'/>
           {/* the className prop can be overridden by page-specific layouts. */}
         {children}
+        <Footer/>
         <Footer/>
       </body>
     </html>
@@ -44,7 +45,7 @@ export default function RootLayout({
 
 const Footer = () => {
   return(
-    <footer id='footer'>
+    <footer id='footer' className='h-screen'>
       <div className='flex justify-center items-center bg-black bottom-0'>
         <p>footer goes here.</p>
       </div>
