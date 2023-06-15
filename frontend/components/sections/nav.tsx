@@ -5,12 +5,17 @@ import NavLink from "../elements/nav-link"
 export const Nav = (props: NavProps) => {
 
     return(
-      <nav id='navbar'>
-        <div className='flex justify-center items-center bg-black text-2xl gap-4 py-4'>
+      <nav id='navbar' className={props.className}>
+        <div id='navlinks' className='flex gap-4'>
           {
             props.links.map(
-              (link, index) => (<NavLink key={index} text={link.text} href={link.href}/>)
-            )
+              (link) => (
+                <NavLink
+                  key={link.text}
+                  text={link.text}
+                  href={link.href}/>
+                )
+              )
           }
         </div>
       </nav>

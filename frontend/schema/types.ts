@@ -1,4 +1,4 @@
-//Data Types
+//Data/Object Types
 
 interface link {
     text : string
@@ -8,6 +8,7 @@ interface link {
 //Props
 
 export type NavProps = {
+    className? : string
     links : link[]
 }
 

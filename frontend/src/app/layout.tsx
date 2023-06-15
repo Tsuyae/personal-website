@@ -5,12 +5,12 @@ import './globals.css'
 import { Nav } from '../../components/sections/nav';
 
 
-const cabin = Cabin({ 
-  weight: ['400', '500', '600', '700'], 
-  style: ["normal"], 
-  subsets: ['latin'], 
+const cabin = Cabin({
+  weight: ['400', '500', '600', '700'],
+  style: ["normal"],
+  subsets: ['latin'],
   display: 'swap'
-}); 
+});
 
 export const metadata = {
   title: "noah's site",
@@ -30,7 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cabin.className}>
-        <Nav links={links}/>
+        <Nav
+          links={links}
+          className='absolute flex justify-center my-4 top-0 w-full z-50'/>
+          {/* the className prop can be overridden by page-specific layouts. */}
         {children}
         <Footer/>
       </body>
