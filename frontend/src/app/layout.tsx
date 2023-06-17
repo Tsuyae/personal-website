@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Cabin } from 'next/font/google';
+import { Tajawal } from 'next/font/google';
 
 import './globals.css'
 import { Nav } from '../../components/sections/nav';
@@ -7,8 +7,8 @@ import { FooterProps } from '../../schema/types';
 import NavLink from '../../components/elements/nav-link';
 
 
-const cabin = Cabin({
-  weight: ['400', '500', '600', '700'],
+const tajawal = Tajawal({
+  weight: ['200', '300', '400', '500', '700', '800', '900'],
   style: ["normal"],
   subsets: ['latin'],
   display: 'swap'
@@ -32,7 +32,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={cabin.className}>
+      <body className={tajawal.className}>
         <Nav
           links={links}
           className='flex justify-center py-4 inset-x-0 top-0 w-full z-50'/>
