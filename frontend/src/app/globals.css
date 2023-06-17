@@ -57,6 +57,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-.component {
-  opacity: 0;
+.section {
+  @apply mx-28 my-12
 }
