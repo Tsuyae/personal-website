@@ -12,7 +12,8 @@ export const Nav = (props: NavProps) => {
   const stick = () => {
     const hero = document.querySelector('#hero') as HTMLElement;
     const navbar = document.querySelector('#navbar') as HTMLElement;
-    if (window.scrollY >= hero.offsetHeight - navbar.offsetHeight) {
+    if (window.scrollY >= hero.offsetHeight) {
+      //note: subtract navbar.offsetHeight from above for alt behavior
       setSticky(true)
     } else {
       setSticky(false)
@@ -22,7 +23,8 @@ export const Nav = (props: NavProps) => {
   useEffect(() => {window.addEventListener('scroll', stick)});
 
     return(
-      <nav id='navbar' className={classNames(props.className, isSticky ? 'fixed' : 'absolute')}>
+      <nav id='navbar' className={classNames(props.className,
+        isSticky ? 'fixed animate-fade-in bg-dark-gray border-b border-white border-opacity-20' : 'absolute bg-none border-none')}>
         <div id='navlinks' className='px-6 flex gap-4'>
           {
             props.links.map(

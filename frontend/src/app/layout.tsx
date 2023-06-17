@@ -3,6 +3,8 @@ import { Cabin } from 'next/font/google';
 
 import './globals.css'
 import { Nav } from '../../components/sections/nav';
+import { FooterProps } from '../../schema/types';
+import NavLink from '../../components/elements/nav-link';
 
 
 const cabin = Cabin({
@@ -18,8 +20,8 @@ export const metadata = {
 }
 
 const links : { text : string,  href : string}[] = [
-  { text : 'About', href : 'about' },
-  { text : 'Contact', href : 'contact' },
+  { text : 'About', href : '#about' },
+  { text : 'Contact', href : '#contact' },
 ]
 
 export default function RootLayout({
@@ -27,6 +29,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       <body className={cabin.className}>
@@ -35,19 +38,28 @@ export default function RootLayout({
           className='flex justify-center py-4 inset-x-0 top-0 w-full z-50'/>
           {/* the className prop can be overridden by page-specific layouts. */}
         {children}
-        <Footer/>
-        <Footer/>
+        <Footer links={links}/>
       </body>
     </html>
   )
 }
 
 
-const Footer = () => {
+const Footer = (props : FooterProps) => {
   return(
-    <footer id='footer' className='h-screen'>
-      <div className='flex justify-center items-center bg-black bottom-0'>
-        <p>footer goes here.</p>
+    <footer id='footer'>
+      <div className='flex justify-center items-center bottom-0 bg-dark-gray border-t border-white border-opacity-20'>
+          {
+            props.links.map(
+              (link) => (
+                <NavLink
+                  className='text-lg transition duration-100 ease-in-out hover:opacity-60'
+                  key={link.text}
+                  text={link.text}
+                  href={link.href}/>
+              )
+            )
+          }
       </div>
     </footer>
   )

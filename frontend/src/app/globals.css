@@ -41,10 +41,22 @@ body {
     opacity: 1;
   }
 }
+
 .animate-fade-in {
   opacity: 0;
   animation-name: fade-in;
-  animation-delay: 2s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+
+.animate-fade-in-delayed {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.component {
+  opacity: 0;
 }

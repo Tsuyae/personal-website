@@ -5,7 +5,9 @@ interface link {
     href : string
 }
 
-//Props
+
+
+//Component Props
 
 export type NavProps = {
     className? : string
@@ -13,5 +15,10 @@ export type NavProps = {
 }
 
 export type NavLinkProps = link & {
+    className? : string
+}
+
+export type FooterProps = {
+    links: link[]
     className? : string
 }
