@@ -23,12 +23,7 @@ export type FooterProps = {
     className? : string
 }
 
-export type GitHubIconProps = {
-    color : 'white' | 'black'
-    className? : string
-}
-
-export type LinkedInIconProps = {
+export type IconProps = {
     color : 'white' | 'black'
     className? : string
 }

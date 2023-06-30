@@ -1,6 +1,7 @@
 import Link from "next/link";
 import GitHubIcon from "../../public/images/logos/github-icon";
 import LinkedInIcon from "../../public/images/logos/linkedin-icon";
+import MailIcon from "../../public/images/icons/mail-icon";
 import SocialLink from "../elements/social-link";
 
 
@@ -18,10 +19,11 @@ export default function Bio() {
                 </p>
             </div>
 
-            <div className="w-[33%] flex flex-col items-center gap-2">
+            <div className="w-[33%] flex flex-col gap-4">
 
                 <SocialLink icon={LinkedInIcon} href="">Follow On LinkedIn</SocialLink>
-                <SocialLink icon={GitHubIcon} href="">Follow On LinkedIn</SocialLink>
+                <SocialLink icon={GitHubIcon} href="">Follow On GitHub</SocialLink>
+                <SocialLink icon={MailIcon} href="">Email Me</SocialLink>
 
                 {/* <Link href = "mailto: me@noaharevalo.com">me@noaharevalo.com</Link> */}
 

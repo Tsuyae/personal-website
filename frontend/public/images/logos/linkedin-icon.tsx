@@ -1,6 +1,6 @@
-import { LinkedInIconProps } from "../../../schema/types"
+import { IconProps } from "../../../schema/types"
 
-export default function LinkedInIcon(props : LinkedInIconProps) {
+export default function LinkedInIcon(props : IconProps) {
 
     const colorMap = {
         'white' : '#fff',
