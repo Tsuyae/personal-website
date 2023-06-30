@@ -8,7 +8,7 @@ import SocialLink from "../elements/social-link";
 export default function Bio() {
   return (
     <section id='bio' className="section">
-        <div className='flex gap-4 justify-evenly'>
+        <div className='flex gap-12 justify-evenly'>
             <div className='w-[66%] flex flex-col gap-6'>
                 <h2 className="text-5xl font-bold text-white">
                 I'm Noah Arevalo. I live in Virginia, where I build the future.
@@ -19,13 +19,13 @@ export default function Bio() {
                 </p>
             </div>
 
-            <div className="w-[33%] flex flex-col gap-4">
+            <div className="w-[33%] flex flex-col items-center justify-center">
 
+                <div className="flex flex-col gap-4">
                 <SocialLink icon={LinkedInIcon} href="">Follow On LinkedIn</SocialLink>
                 <SocialLink icon={GitHubIcon} href="">Follow On GitHub</SocialLink>
-                <SocialLink icon={MailIcon} href="">Email Me</SocialLink>
-
-                {/* <Link href = "mailto: me@noaharevalo.com">me@noaharevalo.com</Link> */}
+                <SocialLink icon={MailIcon} href="mailto: me@noaharevalo.com">me@noaharevalo.com</SocialLink>
+                </div>
 
             </div>
         </div>
