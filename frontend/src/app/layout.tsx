@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Tajawal } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 
 import './globals.css'
 import { Nav } from '../../components/sections/nav';
@@ -7,8 +7,8 @@ import { FooterProps } from '../../schema/types';
 import NavLink from '../../components/elements/nav-link';
 
 
-const tajawal = Tajawal({
-  weight: ['200', '300', '400', '500', '700', '800', '900'],
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
   style: ["normal"],
   subsets: ['latin'],
   display: 'swap'
@@ -32,7 +32,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={tajawal.className}>
+      <body className={roboto.className}>
         <Nav
           links={links}
           className='flex justify-center py-4 inset-x-0 top-0 w-full z-50'/>
@@ -53,7 +53,6 @@ const Footer = (props : FooterProps) => {
             props.links.map(
               (link) => (
                 <NavLink
-                  className='text-lg transition duration-100 ease-in-out hover:opacity-60'
                   key={link.text}
                   text={link.text}
                   href={link.href}/>

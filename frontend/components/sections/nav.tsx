@@ -9,6 +9,7 @@ import classNames from "classnames"
 export const Nav = (props: NavProps) => {
 
   const [isSticky, setSticky] = useState(false);
+
   const stick = () => {
     const hero = document.querySelector('#hero') as HTMLElement;
     const navbar = document.querySelector('#navbar') as HTMLElement;
@@ -30,7 +31,6 @@ export const Nav = (props: NavProps) => {
             props.links.map(
               (link) => (
                 <NavLink
-                  className='text-lg transition duration-100 ease-in-out hover:opacity-60'
                   key={link.text}
                   text={link.text}
                   href={link.href}/>

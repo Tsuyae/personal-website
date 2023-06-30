@@ -45,7 +45,7 @@ body {
 .animate-fade-in {
   opacity: 0;
   animation-name: fade-in;
-  animation-duration: 1s;
+  animation-duration: 250ms;
   animation-fill-mode: forwards;
 }
 

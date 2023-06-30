@@ -22,3 +22,13 @@ export type FooterProps = {
     links: link[]
     className? : string
 }
+
+export type GitHubIconProps = {
+    color : 'white' | 'black'
+    className? : string
+}
+
+export type LinkedInIconProps = {
+    color : 'white' | 'black'
+    className? : string
+}
