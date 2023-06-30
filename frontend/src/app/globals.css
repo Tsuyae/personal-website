@@ -57,6 +57,7 @@ body {
   animation-fill-mode: forwards;
 }
 
+/* TODO: add more padding on larger screens */
 .section {
   @apply mx-28 my-12
 }
